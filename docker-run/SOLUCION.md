@@ -1,0 +1,4 @@
+# docker run (soluciones)
+a. `docker run -w /home alpine`. Es necesario el parámetro `-w /home` para definir el directorio de trabajo, y la imagen `alpine` para que el contenedor use la distribución Linux Alpine.
+
+b. `docker run -it alpine`. El parámetro `-t` ejecuta el contenedor en una pseudo-tty, tal y como indica la documentación de Docker. Esto quiere decir que el output (STDOUT o standard output) del proceso estará formateado, tal y como pasa cuando ejecutamos comandos en el terminal de nuestra máquina. La opción `-i` es el modo interactivo: conecta el input del contenedor (el canal STDIN o standard input) con el input del terminal de nuestra máquina.
