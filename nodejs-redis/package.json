@@ -1,0 +1,23 @@
+{
+  "name": "introduccion-docker",
+  "version": "1.0.0",
+  "description": "Ejercicios para el curso de Introducción a Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauGa9/introduccion-docker.git"
+  },
+  "author": "Pau Gasol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauGa9/introduccion-docker/issues"
+  },
+  "homepage": "https://github.com/PauGa9/introduccion-docker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
+  }
+}
