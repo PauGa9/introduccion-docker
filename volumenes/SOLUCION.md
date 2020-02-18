@@ -1,6 +1,7 @@
 # volúmenes y bind-mount (soluciones)
 
-a. Primero, es necesario crear el volumen.
+## a.
+Primero, es necesario crear el volumen.
 
 `docker volume create datos-mysql`
 
@@ -16,9 +17,12 @@ Después, ya podemos instanciar el contenedor de MySQL:
 
 Para comprobar que ha funcionado, crea una tabla y realiza un insert. Seguidamente, para el contenedor de MySQL (`docker stop`), y vuelve a ejecutar el comando `docker run` anterior. Cuando te vuelvas a conectar a MySQL, deberías encontrar la tabla con el insert.
 
-b. `docker run -v $(pwd):/home -w /home --rm alpine:latest sh script.sh`. Las opciones usadas son:
+## b.
+`docker run -v $(pwd):/home -w /home --rm alpine:latest sh script.sh`.
 
-- -v para usar bind-mount: a diferencia del ejercicio anterior, aquí estamos usando <ruta-máquina-local>:<ruta-contenedor>; las rutas en ambos casos tienen que ser absolutas, y para evitar tener que escribir la ruta de nuestra máquina usamos _command substitution_ de bash con el comando `pwd` ([más info sobre $()](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html))
+Las opciones usadas son:
+
+- -v para usar `bind-mount`: a diferencia del ejercicio anterior, aquí estamos usando `<ruta-máquina-local>:<ruta-contenedor>`; las rutas en ambos casos tienen que ser absolutas, y para evitar tener que escribir la ruta de nuestra máquina usamos _command substitution_ de bash con el comando `pwd` ([más info sobre $()](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html))
 - -w para definir el directorio de trabajo; en este caso, usaremos el directorio del bind-mount en el contenedor, `/home`
 - --rm para eliminar el contenedor cuando pare
 
