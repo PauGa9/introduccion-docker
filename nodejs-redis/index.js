@@ -9,7 +9,7 @@ client.on("error", function (err) {
 const express = require('express');
 const app = express();
 
-app.get('/incrementa', function (request, response) {
+app.get('/', function (request, response) {
     client.incr('valor');
     client.get('valor', function(error, value) {
         response.send(`El valor es ${value}`);
