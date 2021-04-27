@@ -18,6 +18,6 @@
   "homepage": "https://github.com/PauGa9/introduccion-docker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "redis": "^2.8.0"
+    "redis": "^3.1.1"
   }
 }
